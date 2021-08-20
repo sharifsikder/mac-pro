@@ -11,7 +11,9 @@ const chargeDelivery = document.getElementById('charge-delivery');
 const deliveryCharge = document.getElementById('delivery-charge');
 const totalPrice = document.getElementById('total-price');
 const bestPrice = document.getElementById('best-Price');
-const allTotal = document.getElementById('all-total');
+const pomoTotal = document.getElementById('all-total');
+const pomoInput = document.getElementById('pomo-input');
+const buttonPomo = document.getElementById('button-pomo');
 
 
 // total price count 
@@ -25,16 +27,10 @@ function updateTotal(){
     const grandTotal =fixedPrice + memoryPrice + storagePrice + deliveryPrice;
     totalPrice.innerText = grandTotal;
     
-    allTotal.innerText = grandTotal;
-   
-    
+    pomoTotal.innerText = grandTotal;
+      
 }
 
-function getAllTotal(){
-    
-   
-   
-}
 // button memory
 largeMemory.addEventListener('click', function(){
 
@@ -75,4 +71,29 @@ chargeDelivery.addEventListener('click', function(){
     deliveryCharge.innerText = '20';
     updateTotal();
 })
+
+// pomo button
+
+function getPomoButton(){
+
+    if(pomoInput.value == 'stevekaku'){
+       
+        const totalAllPrice = Number(totalPrice.innerText);
+        const pomo = totalAllPrice * (20/100);
+        const totalPomoPrice = totalAllPrice - pomo;
+        pomoTotal.innerText = totalPomoPrice;  
+        
+    }
+
+    else if( pomoInput.value != 'stevekaku'){
+
+        alert("Doesn't match of Pomo Code ");
+}
+}
+buttonPomo.addEventListener('click', function(){
+
+    getPomoButton();
+    pomoInput.value = '';
+})
+
 
