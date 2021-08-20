@@ -1,0 +1,1 @@
+console.log('Sharif Sikder js file ta kaj kortese')
