@@ -1,4 +1,10 @@
-h1{
-    font-size: 50px;
-    color:deepskyblue
+.image{
+    text-align: right;
+}
+.text-mac{
+    margin-bottom: 30px;
+}
+.width{
+    width:50%;
+    font-size: 20px;
 }
