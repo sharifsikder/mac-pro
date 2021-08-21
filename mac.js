@@ -85,7 +85,6 @@ function getPomoButton(){
         alert('Please type the pomo code')
 }
 }
-
 buttonPomo.addEventListener('click', function(){
 
     getPomoButton();
